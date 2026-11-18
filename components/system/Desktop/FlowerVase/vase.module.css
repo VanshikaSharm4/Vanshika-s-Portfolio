@@ -43,8 +43,6 @@
 }
 
 .stem {
-  background: linear-gradient(90deg, #597356, #a0b78c);
-  border-radius: 8px;
   bottom: 42px;
   height: var(--stem-height);
   left: var(--stem-left);
@@ -52,6 +50,23 @@
   transform: rotate(var(--stem-angle));
   transform-origin: bottom;
   width: 2px;
+}
+
+.stemLine {
+  fill: none;
+  height: 100%;
+  left: -7px;
+  overflow: visible;
+  position: absolute;
+  stroke: #8da983;
+  stroke-linecap: round;
+  stroke-width: 2.5;
+  top: 0;
+  width: 16px;
+}
+
+.stem:nth-child(even) .stemLine {
+  transform: scaleX(-1);
 }
 
 .stem::after {
@@ -68,35 +83,35 @@
 
 .stem[data-slot="0"] {
   --flower: #efabc7;
-  --stem-height: 88px;
+  --stem-height: 77px;
   --stem-left: 72px;
   --stem-angle: -7deg;
 }
 
 .stem[data-slot="1"] {
   --flower: #b6a2ea;
-  --stem-height: 76px;
+  --stem-height: 68px;
   --stem-left: 66px;
   --stem-angle: -33deg;
 }
 
 .stem[data-slot="2"] {
   --flower: #ffd48d;
-  --stem-height: 77px;
+  --stem-height: 69px;
   --stem-left: 76px;
   --stem-angle: 28deg;
 }
 
 .stem[data-slot="3"] {
   --flower: #fac4ac;
-  --stem-height: 57px;
+  --stem-height: 51px;
   --stem-left: 65px;
   --stem-angle: -55deg;
 }
 
 .stem[data-slot="4"] {
   --flower: #e7afd5;
-  --stem-height: 57px;
+  --stem-height: 51px;
   --stem-left: 82px;
   --stem-angle: 51deg;
 }
@@ -118,13 +133,13 @@
 }
 
 .bloom {
-  height: 43px;
-  left: -20px;
+  height: 56px;
+  left: -27px;
   object-fit: contain;
   position: absolute;
-  top: -26px;
+  top: -32px;
   transform: rotate(calc(-1 * var(--stem-angle)));
-  width: 43px;
+  width: 56px;
 }
 
 .vase {

@@ -262,6 +262,13 @@ const FlowerVase: FC = () => {
         <span aria-hidden="true" className={styles.bouquet}>
           {[0, 1, 2, 3, 4].map((slot) => (
             <span key={slot} className={styles.stem} data-slot={slot}>
+              <svg
+                className={styles.stemLine}
+                preserveAspectRatio="none"
+                viewBox="0 0 16 80"
+              >
+                <path d="M8 0C0 16 0 27 8 39S16 62 8 80" />
+              </svg>
               {flowers[slot] ? (
                 <img
                   alt=""
