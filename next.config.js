@@ -29,7 +29,7 @@ const nextConfig = {
     },
   },
   devIndicators: false,
-  distDir: isProduction ? ".next-production" : ".next",
+  distDir: isProduction ? ".next" : ".next-dev",
   headers: async () => [
     {
       source: "/:path*",
