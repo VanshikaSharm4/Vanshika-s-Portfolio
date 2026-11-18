@@ -118,9 +118,6 @@
 }
 
 .bloom {
-  background: #fff8ee;
-  border: 1px solid #dab8c3;
-  border-radius: 48% 52% 50% 46%;
   height: 43px;
   left: -20px;
   object-fit: contain;
