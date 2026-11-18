@@ -14,6 +14,7 @@ const webpack = require("webpack");
  * */
 const nextConfig = {
   agentRules: false,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
   allowedDevOrigins: ["**.*"],
   compiler: {
     reactRemoveProperties: isProduction,
@@ -28,6 +29,7 @@ const nextConfig = {
     },
   },
   devIndicators: false,
+  distDir: isProduction ? ".next-production" : ".next",
   headers: async () => [
     {
       source: "/:path*",

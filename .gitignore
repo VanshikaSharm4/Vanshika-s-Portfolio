@@ -50,3 +50,5 @@ tmp/
 # Portfolio desktop launchers
 !public/Users/Public/Desktop/Internships.url
 !public/Users/Public/Desktop/Projects.url
+
+.next-production

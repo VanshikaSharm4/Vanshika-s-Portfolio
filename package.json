@@ -16,7 +16,7 @@
     "ios_saf >= 13.4"
   ],
   "scripts": {
-    "build": "yarn build:prebuild && next build --webpack && yarn build:minify",
+    "build": "yarn build:prebuild && next build --webpack && node scripts/prepare-static.js",
     "build:bundle-analyzer": "yarn build",
     "build:fs:private": "node scripts/fs2json.js --out public/.index/fs.private.9p.json ./public/private",
     "build:fs:public": "node scripts/fs2json.js --exclude .index,private --out public/.index/fs.9p.json ./public",
