@@ -1,0 +1,6 @@
+CREATE TABLE flowers (
+  sequence INTEGER PRIMARY KEY AUTOINCREMENT,
+  id TEXT NOT NULL UNIQUE,
+  drawing TEXT NOT NULL,
+  note TEXT NOT NULL CHECK(length(note) <= 200)
+);

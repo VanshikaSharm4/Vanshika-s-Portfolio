@@ -23,6 +23,21 @@ Custom domains and user sites also work because the workflow uses the actual hos
 
 Vercel builds with an empty base path and supplies the cross-origin headers used by some browser apps.
 
+## Shared flower vase
+
+The portfolio reads and posts flowers through a Cloudflare Worker backed by D1. Both hosts can use the same Worker URL and bouquet.
+
+1. Open a terminal in the `flower-vase` directory and sign in with `npx wrangler@4 login`.
+2. For a new Cloudflare account, run `npx wrangler@4 d1 create vanshika-flower-vase` and put the resulting database ID in `wrangler.jsonc`. The checked-in ID refers to the portfolio's existing database.
+3. Run `npx wrangler@4 d1 migrations apply vanshika-flower-vase --remote`, then `npx wrangler@4 deploy`.
+4. Set `NEXT_PUBLIC_FLOWER_VASE_API` to the deployed Worker URL followed by `/flowers`. On GitHub, add it under **Settings → Secrets and variables → Actions → Variables** and rerun the Pages workflow. On Vercel, add it under **Settings → Environment Variables** and redeploy.
+
+GitHub Pages' origin is already allowed. To connect Vercel or a custom domain, append its origin to `ALLOWED_ORIGINS` as a comma-separated value, then redeploy the Worker. Use origins such as `https://example.vercel.app` without a path or trailing slash.
+
+Flowers and notes are public. The Worker accepts PNG drawings from the editor and notes of up to 200 characters. It limits repeat submissions. To remove a flower, find its ID in the Worker’s `/flowers` response or the D1 console, then delete that row from the `flowers` table.
+
+For local development, apply the migration with `--local` instead of `--remote`. Run `npx wrangler@4 dev --ip 127.0.0.1 --port 8787 --var ALLOWED_ORIGINS:http://127.0.0.1:3000` and start the Next.js development server with `NEXT_PUBLIC_FLOWER_VASE_API=http://127.0.0.1:8787/flowers`. Open the portfolio at `http://127.0.0.1:3000/`.
+
 ## Local checks
 
 For a normal root-hosted export, run yarn install --frozen-lockfile, then yarn build and yarn serve.

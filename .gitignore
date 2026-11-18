@@ -54,3 +54,6 @@ tmp/
 .next-production
 
 .next-dev
+
+flower-vase/.dev.vars*
+flower-vase/.wrangler/

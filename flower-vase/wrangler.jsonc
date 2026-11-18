@@ -1,0 +1,24 @@
+{
+  "name": "vanshika-flower-vase",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://vanshikasharm4.github.io",
+  },
+  "d1_databases": [
+    {
+      "binding": "FLOWERS",
+      "database_name": "vanshika-flower-vase",
+      "database_id": "d0d3b6aa-7ce9-4994-b999-124e904eae80",
+    },
+  ],
+  "ratelimits": [
+    {
+      "name": "SUBMISSIONS",
+      "namespace_id": "182614",
+      "simple": { "limit": 5, "period": 60 },
+    },
+  ],
+}

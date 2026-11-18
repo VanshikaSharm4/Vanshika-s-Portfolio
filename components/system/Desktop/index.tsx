@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import FlowerVase from "components/system/Desktop/FlowerVase";
 import StyledDesktop from "components/system/Desktop/StyledDesktop";
 import useWallpaper from "components/system/Desktop/Wallpapers/useWallpaper";
 import FileManager from "components/system/Files/FileManager";
@@ -19,6 +20,7 @@ const Desktop: FC = ({ children }) => {
         isDesktop
         loadIconsImmediately
       />
+      <FlowerVase />
       {children}
     </StyledDesktop>
   );
