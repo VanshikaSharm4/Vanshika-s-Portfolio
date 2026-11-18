@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="470" viewBox="0 0 600 470" fill="none">
+  <defs>
+    <radialGradient id="globe" cx=".38" cy=".3" r=".8"><stop stop-color="#fff"/><stop offset="1" stop-color="#f1f7ff"/></radialGradient>
+    <linearGradient id="card" x1="65" y1="260" x2="250" y2="375" gradientUnits="userSpaceOnUse"><stop stop-color="#1879ef"/><stop offset="1" stop-color="#1455b5"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-40%" width="170%" height="190%"><feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#164c91" flood-opacity=".1"/></filter>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="m1 1 4 2.5L1 6" stroke="#277be1" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <clipPath id="sphere"><circle cx="305" cy="206" r="119"/></clipPath>
+  </defs>
+  <ellipse cx="305" cy="206" rx="183" ry="68" transform="rotate(-28 305 206)" stroke="#f3c8aa" stroke-dasharray="3 7"/>
+  <circle cx="305" cy="206" r="119" fill="url(#globe)" stroke="#c4d9f5"/>
+  <g clip-path="url(#sphere)" stroke="#d2e3f9" stroke-width="1">
+    <ellipse cx="305" cy="206" rx="74" ry="119"/><ellipse cx="305" cy="206" rx="31" ry="119"/>
+    <ellipse cx="305" cy="206" rx="119" ry="46"/><ellipse cx="305" cy="206" rx="119" ry="86"/>
+    <path d="M186 206h238M305 87v238"/>
+  </g>
+  <g fill="#d6e6fa" stroke="#bed5f2" stroke-linejoin="round">
+    <path d="m223 143 20-15 29 5 8 14-14 14-3 21-14 5-5-20-17-6Z"/>
+    <path d="m260 196 19 5 10 20-9 31-15 18-7-21 2-23-11-19Z"/>
+    <path d="m312 146 19-12 14 4 10-9 34 17 10 17-21 6-17-5-14 13-20-6-6-13Z"/>
+    <path d="m313 184 26-4 17 18-6 24-18 24-15-16-11-25Z"/>
+    <path d="m360 242 22-6 14 14-6 12-24-3Z"/>
+  </g>
+  <path d="M152 156c40-65 130-69 179-26" stroke="#2679e4" stroke-width="1.7" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+  <path d="M399 172c33 27 42 68 21 99" stroke="#2679e4" stroke-width="1.7" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+  <path d="M269 277c31 22 68 24 98 10" stroke="#2679e4" stroke-width="1.7" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <circle cx="155" cy="156" r="31" fill="#fff" stroke="#c2d8f6"/><text x="155" y="168" fill="#166fe0" font-family="Arial, sans-serif" font-size="35" text-anchor="middle">$</text>
+    <circle cx="424" cy="151" r="28" fill="#fff3e9" stroke="#f0ccb0"/><text x="424" y="162" fill="#c58251" font-family="Arial, sans-serif" font-size="31" text-anchor="middle">€</text>
+    <circle cx="306" cy="95" r="24" fill="#fff" stroke="#c2d8f6"/><text x="306" y="104" fill="#166fe0" font-family="Arial, sans-serif" font-size="26" text-anchor="middle">₹</text>
+  </g>
+  <g transform="rotate(-8 166 317)" filter="url(#shadow)">
+    <rect x="66" y="258" width="201" height="123" rx="12" fill="url(#card)"/>
+    <text x="85" y="282" fill="#d0e6ff" font-family="monospace" font-size="8" letter-spacing="1.6">PAY FROM ANYWHERE</text>
+    <rect x="86" y="300" width="26" height="20" rx="4" fill="#ffdbb9"/><path d="M94 300v20m9-20v20m-17-10h26" stroke="#d2a481" stroke-width=".8"/>
+    <text x="86" y="344" fill="white" font-family="Arial, sans-serif" font-size="14" letter-spacing="2">••••  ••••  ••••  2048</text>
+    <text x="86" y="364" fill="#cce0ff" font-family="monospace" font-size="6.5" letter-spacing="1.3">BORDERLESS POSSIBILITIES</text>
+    <circle cx="231" cy="282" r="8" fill="#76aff8"/><circle cx="241" cy="282" r="8" fill="#b6d5ff" fill-opacity=".85"/>
+  </g>
+  <g transform="rotate(5 428 313)" filter="url(#shadow)">
+    <rect x="334" y="265" width="189" height="97" rx="10" fill="#fff" stroke="#d1e0f3"/>
+    <rect x="352" y="283" width="31" height="31" rx="8" fill="#edf4ff"/>
+    <path d="M361 305v-11h14v11m-16-11 3-5h12l3 5m-11 11v-6h5v6" stroke="#2674d5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="394" y="292" fill="#7590b2" font-family="monospace" font-size="6.5" letter-spacing="1">FOR THE MERCHANT</text>
+    <text x="394" y="310" fill="#234d81" font-family="Arial, sans-serif" font-size="13">A world of customers.</text>
+    <path d="M352 327h153" stroke="#e3ebf6"/>
+    <circle cx="357" cy="343" r="3" fill="#e9ab80"/><text x="368" y="346" fill="#6783a7" font-family="monospace" font-size="7" letter-spacing=".5">CONNECT ACROSS BORDERS</text>
+  </g>
+  <circle cx="216" cy="110" r="3" fill="#eebb96"/><circle cx="468" cy="220" r="3" fill="#a5c8f5"/><circle cx="126" cy="224" r="2" fill="#a5c8f5"/>
+</svg>
